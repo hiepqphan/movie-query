@@ -1,0 +1,17 @@
+<% include partials/header %>
+
+<h1>Search result</h1>
+
+<% if (isSearching == true && movie.Response == "False") { %>
+    <p>No movies found.</p>
+<% } else if (isSearching == true) {%>
+    <ul>
+        <li>Title: <%= movie.Title %></li>
+        <li>Release date: <%= movie.Released %></li>
+        <li>Genre: <%= movie.Genre %></li>
+        <li>Metascore: <%= movie.Metascore %></li>
+        <li>IMDb Rating: <%= movie.imdbRating %></li>
+    </ul>
+<% } %>
+    
+<% include partials/footer %>

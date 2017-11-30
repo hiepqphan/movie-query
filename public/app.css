@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    width: 100px;
+    height: 145px;
+    display: inline-block;
+    text-align: right;
+}
+
+.col-xs-8 {
+    text-align: left;
+    padding-top: 2%;
+}
+
+div {
+    padding-bottom: 20px;
+}

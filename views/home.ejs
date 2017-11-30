@@ -1,0 +1,46 @@
+<% include partials/header %>
+
+<div class="container">
+    
+    <h1>Welcome to Movie Query</h1>
+    
+    <form action='/searchmovie' method='POST'>
+        <input type='text' name='text_input' placeholder='Enter value'>
+        <span class='search-by-text'>Search for</span>
+        <select name='result_num'>
+            <option value='one'>One</option>
+            <option value='multiple' selected="selected">Multiple</option>
+        </select>
+        <button type='submit'>Search</button>
+    </form>
+
+    
+    <% if (isSearching == true) { %>
+            <h2>Search result</h2>
+    <% if (result.Response == "False") { %>
+            <p>No movies found.</p>
+    <% } else if (searchForOne == true) { %>
+        <ul>
+            <li>Title: <%= result.Title %></li>
+            <li>Release date: <%= result.Released %></li>
+            <li>Genre: <%= result.Genre %></li>
+            <li>Metascore: <%= result.Metascore %></li>
+            <li>IMDb Rating: <%= result.imdbRating %></li>
+        </ul>
+    <% } else { %>
+    <% for (var i = 0; i < result.Search.length; ++i) { %>
+        <div class="row">
+            <div class="col-xs-4">
+                <img alt="Poster not found" src=<%= result.Search[i].Poster %> >
+            </div>
+            <div class="col-xs-8">
+                <li><%= i+1 %>. <strong><%= result.Search[i].Title %></strong></li>
+                <li>Year: <%= result.Search[i].Year %></li>
+                <li>IMDb ID: <%= result.Search[i].imdbID %></li>
+            </div>
+        </div>
+    <% } } } %>
+    
+</div>
+
+<% include partials/footer %>
