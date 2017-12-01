@@ -1,0 +1,35 @@
+{
+  "name": "movie-query",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": "8.9.1",
+    "npm": "5.5.1"
+  },
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiepqphan/movie-query.git"
+  },
+  "keywords": [
+    "movie",
+    "html",
+    "database"
+  ],
+  "author": "Hiep Phan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hiepqphan/movie-query/issues"
+  },
+  "homepage": "https://github.com/hiepqphan/movie-query#readme"
+}
